@@ -11,7 +11,7 @@ RUN groupadd -g $GID subgit && useradd -d /subgit -u $UID -g $GID -m subgit
 # install dependencies
 RUN \
     apt-get update && \
-    apt-get -y --no-install-recommends install wget default-jre git subversion && \
+    apt-get -y --no-install-recommends install procps wget default-jre git subversion && \
     rm -rf /var/lib/apt/lists*
 
 # install subgit
